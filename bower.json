@@ -1,0 +1,15 @@
+{
+	"name": "adapt-forceLoad",
+	"homepage": "https://github.com/tomgreenfield/adapt-forceLoad",
+	"authors": [
+		"Tom Greenfield",
+		"Daryl Hedly"
+	],
+	"description": "An extension to force pages to load even with missing assets.",
+	"main": "/js/adapt-forceLoad.js",
+	"keywords": [
+		"adapt-plugin",
+		"adapt-extension"
+	],
+	"license": "GPLv3"
+}
