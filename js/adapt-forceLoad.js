@@ -1,20 +1,20 @@
-/*
-* Force Load
-* License - https://github.com/adaptlearning/adapt_framework/blob/master/LICENSE
-* Maintainers - Tom Greenfield
-*/
-
 define(function(require) {
 
 	var Adapt = require("coreJS/adapt");
 
-	Adapt.on("pageView:postRender", function(view) {
-		if (Adapt.config.get("_forceLoad")) {
-			console.log("Force Load: _forceLoad is set to true in config.json.");
+	Adapt.on("app:dataReady", function() {
+		if (!Adapt.config.get("_forceLoad")) return;
+
+		$("<div/>")
+			.addClass("force-load")
+			.text("Force Load enabled")
+			.appendTo($("#wrapper"));
+
+		Adapt.on("menuView:postRender pageView:postRender", function(view) {
 			_.defer(function() {
 				view.model.setOnChildren({ _isReady: true });
 			});
-		}
+		});
 	});
 
 });
