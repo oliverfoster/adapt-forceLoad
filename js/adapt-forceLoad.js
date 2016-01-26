@@ -1,6 +1,4 @@
-define(function(require) {
-
-	var Adapt = require("coreJS/adapt");
+define([ "coreJS/adapt" ], function(Adapt) {
 
 	Adapt.on("app:dataReady", function() {
 		if (!Adapt.config.get("_forceLoad")) return;
@@ -11,9 +9,7 @@ define(function(require) {
 			.appendTo($("#wrapper"));
 
 		Adapt.on("menuView:postRender pageView:postRender", function(view) {
-			_.defer(function() {
-				view.model.setOnChildren({ _isReady: true });
-			});
+			_.defer(function() { view.model.setOnChildren({ _isReady: true }); });
 		});
 	});
 

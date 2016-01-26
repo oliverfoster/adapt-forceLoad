@@ -1,6 +1,6 @@
 {
 	"name": "adapt-forceLoad",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "An extension to force pages to load even with missing assets.",
 	"main": "/js/adapt-forceLoad.js",
 	"keywords": [

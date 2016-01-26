@@ -1,4 +1,4 @@
-# adapt-forceLoad
+# Force Load
 
 An extension to force pages to load even with missing assets.
 
