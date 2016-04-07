@@ -1,6 +1,6 @@
 define([ "coreJS/adapt" ], function(Adapt) {
 
-	Adapt.on("app:dataReady", function() {
+	Adapt.once("app:dataReady", function() {
 		if (!Adapt.config.get("_forceLoad")) return;
 
 		$("<div/>")
