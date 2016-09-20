@@ -8,9 +8,8 @@ define([ "coreJS/adapt" ], function(Adapt) {
 			.text("Force Load enabled")
 			.appendTo($("#wrapper"));
 
-		Adapt.on("menuView:postRender pageView:postRender", function(view) {
-			_.defer(function() { view.model.setOnChildren({ _isReady: true }); });
-		});
+		$.fn.imageready.timeoutDuration = 250;
+
 	});
 
 });
